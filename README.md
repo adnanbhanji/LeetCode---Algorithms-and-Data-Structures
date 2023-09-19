@@ -1,1 +1,1 @@
-# LeetCode---Algorithms-and-Data-Structures
+# LeetCode-Algorithms-and-Data-Structures
