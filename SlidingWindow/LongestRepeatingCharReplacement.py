@@ -3,16 +3,16 @@ class Solution:
         left = 0
         longest = 0
         store = {}
-        max_freq = 0
+        # max_freq = 0
         for i in range(len(s)):
             if s[i] not in store:
                 store[s[i]] = 1
             else:
                 store[s[i]] += 1
 
-            max_freq = max(max_freq, store[s[i]])
+            # max_freq = max(max_freq, store[s[i]])
 
-            while (i - left + 1) - max_freq > k:
+            while (i - left + 1) - max(store.values()) > k:
                 store[s[left]] -= 1
                 left += 1
             
