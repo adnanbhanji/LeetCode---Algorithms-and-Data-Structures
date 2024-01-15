@@ -7,16 +7,16 @@
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         self.diameter = 0
-        self.check_balance(root)
+        self.calculate_height(root)
         return self.diameter
 
 
-    def check_balance(self, node):
+    def calculate_height(self, node):
         if not node:
             return 0
         
-        left = self.check_balance(node.left)
-        right = self.check_balance(node.right)
+        left = self.calculate_height(node.left)
+        right = self.calculate_height(node.right)
 
         self.diameter = max(self.diameter, left + right)
 
